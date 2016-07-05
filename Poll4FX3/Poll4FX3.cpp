@@ -22,7 +22,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		for (i = 0; i < USBDevice->DeviceCount(); i++)
 		{
 			USBDevice->Open(i);
-			printf("\nDev VID = %d, PID = %d", USBDevice->VendorID, USBDevice->ProductID);
+			printf("\nDev VID = %x, PID = %x", USBDevice->VendorID, USBDevice->ProductID);
 			// A BulkLoop device will have a VID=0x04B4 and a PID=0x00F0
 			if ((USBDevice->VendorID == 0x04B4) && (USBDevice->ProductID == 0x00F0))
 			{
